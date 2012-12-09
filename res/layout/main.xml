@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/main"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_height="fill_parent"
+	android:layout_width="fill_parent">
+	
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/firstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="First: " >
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/lastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/firstName"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Last: " />
+
+        <EditText
+            android:id="@+id/phoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/lastName"
+            android:ems="10"
+            android:inputType="phone"
+            android:text="Phone: " />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/phoneNumber"
+            android:text="Add Contact" />
+
+    </RelativeLayout>
+    
+	<!-- Header -->
+	<LinearLayout android:id="@+id/header"
+		android:background="#ff347c12"
+		android:layout_height="wrap_content"
+		android:layout_width="fill_parent"
+		>
+		<TextView android:id="@+id/headerDelete"
+			android:layout_height="fill_parent"
+			android:layout_width="wrap_content"
+			android:text="@string/delete_contact"
+			android:width="90dip"
+			android:height="20dip"
+		/>
+		<TextView android:id="@+id/headerFirstName"
+			android:layout_height="fill_parent"
+			android:layout_width="wrap_content"
+			android:text="@string/first_name"
+			android:width="90dip"
+			android:height="20dip"
+		/>
+		<TextView android:id="@+id/headerLastName"
+			android:layout_height="fill_parent"
+			android:layout_width="wrap_content"
+			android:text="@string/last_name"
+			android:width="90dip"
+			android:height="20dip"
+		/>
+		<TextView android:id="@+id/headerPhoneNumber"
+			android:layout_height="fill_parent"
+			android:layout_width="wrap_content"
+			android:text="@string/phone_number"
+			android:width="90dip"
+			android:height="20dip"
+		/>
+	</LinearLayout>
+
+	<!-- List Divider -->
+	<View android:layout_width="fill_parent"
+		android:layout_height="1dip"
+		android:background="?android:attr/listDivider" />
+
+	<!-- ListView (grid_items) -->
+	<LinearLayout android:id="@+id/layout"
+		android:layout_width="wrap_content"
+		android:layout_height="fill_parent">
+		<ListView android:id="@+id/listview"
+			android:layout_height="fill_parent"
+			android:layout_width="fill_parent">
+		</ListView>
+	</LinearLayout>
+</LinearLayout>
