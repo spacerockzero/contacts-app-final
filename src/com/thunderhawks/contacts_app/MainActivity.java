@@ -30,6 +30,7 @@ public class MainActivity extends Activity {
 //        
 //        // Update/Instantiate the contacts view
 //        theApplicationController.handleRequest("updateContactsView", null);
+        
         ListView lv= (ListView)findViewById(R.id.listview);
 
         // create the grid item mapping
