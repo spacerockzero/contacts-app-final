@@ -33,7 +33,7 @@ public class MainActivity extends Activity {
         ListView lv= (ListView)findViewById(R.id.listview);
 
         // create the grid item mapping
-        String[] from = new String[] {"Delete", "First", "Last", "Phone"};
+        String[] from = new String[] {"rowid", "firstName", "lastName", "phoneNumber"};
         int[] to = new int[] { R.id.deleteCheckBox, R.id.firstName, R.id.lastName, R.id.phoneNumber };
 
         // prepare the list of all records
@@ -41,9 +41,9 @@ public class MainActivity extends Activity {
         for(int i = 0; i < 10; i++){
         	HashMap<String, String> map = new HashMap<String, String>();
         	map.put("rowid", "" + i);
-        	map.put("col_1", "col_1_item_" + i);
-        	map.put("col_2", "col_2_item_" + i);
-        	map.put("col_3", "col_3_item_" + i);
+        	map.put("firstName", "Sven_" + i);
+        	map.put("lastName", "Bjornssen_" + i);
+        	map.put("phoneNumber", "555-000" + i);
         	fillMaps.add(map);
         }
 
