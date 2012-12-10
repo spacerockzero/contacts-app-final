@@ -19,19 +19,28 @@ public class ContactsModel {
 	//Static test data to be used until the data model implementations have been implemented
 		//Static PersonBeans
 		PersonBean person1 = new PersonBean();
+		//Get new UUID to be used as the key for the individual contact
+		UUID idUUID = UUID.randomUUID();
+		person1.setId(idUUID.toString());
 		person1.setFirstName("Steve");
 		person1.setLastName("Steverson");
 		person1.setPhoneNumber("555-555-0001");
 		
 		PersonBean person2 = new PersonBean();
-		person1.setFirstName("Bjorn");
-		person1.setLastName("Bjornssen");
-		person1.setPhoneNumber("555-555-0002");
+		//Get new UUID value to be used as the key for the individual contact
+		idUUID = UUID.randomUUID();
+		person1.setId(idUUID.toString());
+		person2.setFirstName("Bjorn");
+		person2.setLastName("Bjornssen");
+		person2.setPhoneNumber("555-555-0002");
 		
 		PersonBean person3 = new PersonBean();
-		person1.setFirstName("Hedwig");
-		person1.setLastName("Svenson");
-		person1.setPhoneNumber("555-555-0003");
+		//Get new UUID value to be used as the key for the individual contact
+		idUUID = UUID.randomUUID();
+		person1.setId(idUUID.toString());
+		person3.setFirstName("Hedwig");
+		person3.setLastName("Svenson");
+		person3.setPhoneNumber("555-555-0003");
 		//End static PersonBeans
 		
 	//create UUID keys for static persons, then put them in the contacts HashMap

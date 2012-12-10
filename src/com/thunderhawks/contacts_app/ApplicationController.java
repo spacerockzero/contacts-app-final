@@ -24,6 +24,10 @@ public class ApplicationController {
 		Handler handler = new LoadDataHandler();
 		initializeHandler(command, handler);
 		
+		command = "updateContactsView";
+		handler = new LoadDataHandler();
+		initializeHandler(command, handler);
+		
 		command = "addPerson";
 		handler = new AddPersonHandler();
 		initializeHandler(command, handler);
