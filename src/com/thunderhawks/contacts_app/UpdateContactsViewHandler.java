@@ -34,7 +34,8 @@ public class UpdateContactsViewHandler implements Handler{
 	    int[] to = new int[] { R.id.deleteCheckBox, R.id.firstName, R.id.lastName, R.id.phoneNumber };
 	  
 	    // Push previous items through adapter so it will match the listView (having issues with contactKeys type, it wants a list type from thekeys in our contacts HashMap)
-
+	    // Still having a small issue with the type checking of contactList
+		@SuppressWarnings("unchecked")
 		SimpleAdapter adapter = new SimpleAdapter(parent, contactList, R.layout.row, from, to);
 	    
 	    // clear previous listView
