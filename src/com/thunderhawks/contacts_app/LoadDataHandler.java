@@ -4,13 +4,10 @@ import java.util.HashMap;
 
 public class LoadDataHandler implements Handler{
 	
-	public void handleIt(HashMap<String, Handler> parameters) {
+	public void handleIt(HashMap<String, String> parameters) {
 		
-		//Instantiate new ContactsModel
-	    ContactsModel theContactsModel = new ContactsModel();
-        
 	    //LoadData from Data Storage (static for now)
-		theContactsModel.loadData();
+		ContactsModel.theContactsModel.loadData();
 		
 	}
 

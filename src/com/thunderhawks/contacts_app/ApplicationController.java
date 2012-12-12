@@ -4,14 +4,15 @@ import java.util.HashMap;
 
 public class ApplicationController {
 	
-	HashMap<String, Handler> handlerMap = new HashMap<String, Handler>();
+	public static ApplicationController theApplicationController;
+	
+	public HashMap<String, Handler> handlerMap = new HashMap<String, Handler>();
 	
 	public ApplicationController() {
 		
 	}
 	
-	
-	public void handleRequest(String command, HashMap<String, Handler> parameters){
+	public void handleRequest(String command, HashMap<String, String> parameters){
 		handlerMap.get(command).handleIt(parameters);
 	}
 	

@@ -4,9 +4,9 @@ import java.util.HashMap;
 
 public class AddPersonHandler implements Handler{
 	
-	public void handleIt(HashMap<String, Handler> parameters) {
-		// TODO Auto-generated method stub
-		
+	public void handleIt(HashMap<String, String> parameters) {
+		// Add contact to contacts HashMap using parameters passed in, by method of ContactsModel class
+		ContactsModel.theContactsModel.addPerson(parameters);
 	}
 
 }
